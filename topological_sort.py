@@ -45,7 +45,38 @@ class Topological_sort:
                 elif self.vertex_list[i].vertex == vertex[0]:
                     self.vertex_list[i].suns.append(vertex[1])
                     self.vertex_list[i].suns.sort()
+    # find all suns of vertex
+    def find_suns_of_vertex(self):
+        for i in range(0, len(self.vertex_list)):
+            for vertex in self.graph_edges:
+                if len(vertex) == 1:
+                    break
+                elif self.vertex_list[i].vertex == vertex[0]:
+                    self.vertex_list[i].suns.append(vertex[1])
+                    self.vertex_list[i].suns.sort()
 
+    # print information about all vertexes
+    def topological_sorting(self):
+        la = []
+        for vertex in self.vertex_list:
+            if vertex.mark == -1:
+                self.visit(vertex, la)
+        print(la)
+
+    def visit(self, vertex, la):
+        if vertex.mark == 0:
+            print("Graph is not DAG")
+            return None
+        elif vertex.mark == -1:
+            vertex.mark = 0
+            if vertex.suns == 0:
+                return la.insert(0, vertex.vertex)
+            for next_vertex in self.vertex_list:
+                for i in range(len(vertex.suns)):
+                    if next_vertex.vertex == vertex.suns[i]:
+                        next_vertex.father = vertex.vertex
+                        self.visit(next_vertex, la)
+            vertex.mark = 1
 
 class Vertex:
 
