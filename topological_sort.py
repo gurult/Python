@@ -31,6 +31,21 @@ class Topological_sort:
                     templist.add(wortex)
         self.vertex_list.sort(key=lambda x: x.vertex)
 
+   # prints all information about vertexes
+    def print_info_of_votexes(self):
+        for i in range(0, len(self.vertex_list)):
+            self.vertex_list[i].print_info()
+
+    # find all suns of vertex
+    def find_suns_of_vertex(self):
+        for i in range(0, len(self.vertex_list)):
+            for vertex in self.graph_edges:
+                if len(vertex) == 1:
+                    break
+                elif self.vertex_list[i].vertex == vertex[0]:
+                    self.vertex_list[i].suns.append(vertex[1])
+                    self.vertex_list[i].suns.sort()
+
 
 class Vertex:
 
