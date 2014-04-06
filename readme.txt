@@ -1,30 +1,19 @@
-<<<<<<< HEAD
-ï»¿UÅ¾davinis suruÅ¡iuoti  grafÄ… topologinÄ™ tvarkÄ… jei neÄ¯manona
+ï»¿ï»¿UÅ¾davinis suruÅ¡iuoti  grafÄ… topologinÄ™ tvarkÄ… jei neÄ¯manona
 paskayti tai. Pateikti virÅ¡unes ir jÅ³ vaikus, kai suruÅ¡iuota 
 nurodyt virÅ¡uniÅ³ tÄ—vus.
 
 programos Ä¯Ä—jimo failas sudaromas taip:
 	nurodoma virÅ¡unÄ— ir kitÄ… virÅ¡unÄ— Ä¯ kuriÄ… galima patekti
 iÅ¡ pirmosios pav failo
-=======
-Uşdavinis suruğiuoti  grafà topologinæ tvarkà jei neámanona
-paskayti tai. Pateikti virğunes ir jø vaikus, kai suruğiuota 
-nurodyt virğuniø tëvus.
-
-programos áëjimo failas sudaromas taip:
-	nurodoma virğunë ir kità virğunë á kurià galima patekti
-iğ pirmosios pav failo
->>>>>>> 05a1067cd110b2346ef0bd2ef6373ec2e3d8799f
 	
 	input.txt
 	1 2
 	2 3 
-<<<<<<< HEAD
  kai baigiama vardinti grafo briaunos gale neturÄ—tÅ³ 
  bÅ«ti tuÅ¡Äios
  eilutÄ—s  1) failo eilutÄ— atstovauja briaunai 1 ----> 2
-=======
- kai baigiama vardinti grafo briaunos gale neturëtø 
- bûti tuğèios
- eilutës  1) failo eilutë atstovauja briaunai 1 ----> 2
->>>>>>> 05a1067cd110b2346ef0bd2ef6373ec2e3d8799f
+
+ programos naudojimas turi bÅ«ti sukurtas objektas 
+ Topological_sort() typo ir kvieÄiams jo metodas sort(file_name)
+rezultatas parodomas konsolÄ—je jei Ä¯manoma iÅ¡ruÅ¡iuot grafÄ… kitÅ³
+atveju pasako, kad to padaryti neÄ¯manoma
