@@ -31,7 +31,7 @@ class Topological_sort:
                     templist.add(wortex)
         self.vertex_list.sort(key=lambda x: x.vertex)
 
-   # prints all information about vertexes
+    # prints all information about vertexes
     def print_info_of_votexes(self):
         for i in range(0, len(self.vertex_list)):
             self.vertex_list[i].print_info()
@@ -45,6 +45,7 @@ class Topological_sort:
                 elif self.vertex_list[i].vertex == vertex[0]:
                     self.vertex_list[i].suns.append(vertex[1])
                     self.vertex_list[i].suns.sort()
+
     # find all suns of vertex
     def find_suns_of_vertex(self):
         for i in range(0, len(self.vertex_list)):
@@ -61,7 +62,7 @@ class Topological_sort:
         for vertex in self.vertex_list:
             if vertex.mark == -1:
                 self.visit(vertex, sorted_list)
-        #print(sorted_list)
+        # print(sorted_list)
 
     def visit(self, vertex, sorted_list):
         if vertex.mark == 0:
@@ -77,6 +78,10 @@ class Topological_sort:
                         next_vertex.father = vertex.vertex
                         self.visit(next_vertex, sorted_list)
             vertex.mark = 1
+
+    def sort(self, file_name):
+        pass
+
 
 class Vertex:
 
